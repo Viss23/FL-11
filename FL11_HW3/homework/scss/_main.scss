@@ -1,0 +1,255 @@
+$colors:(
+    'grey1':#c0c3af,
+    'grey2':#c0c3ce
+);
+
+*{
+    padding: 0;
+    margin:0;
+}
+
+body{
+    background:$bodycolor;
+}
+
+header{
+    background: $headerImage; 
+    height:900px;
+    z-index: -2;
+    background-size: cover;
+    background-position: center;
+    border-bottom-right-radius: 40%;   
+    position: relative;
+}
+    .header-wrap{
+        padding-left: 190px;
+        padding-top: 25px;
+    }
+
+    .landing-logo {
+        display: flex;
+        flex-direction: row;
+        width:150px;
+
+    img{
+        min-width: 55px;
+        min-height: 55px;
+    }
+    p{
+        text-align: center;
+        margin:5px 0px 0px 20px;
+        font: 28px $body;
+        color:$headerTextColor;
+        font-weight: 600;
+        line-height: 1;
+        
+        span{
+            font-size:14px; 
+            display: block;
+            font-weight: 300;
+            padding: 3px;
+        }
+    }
+}
+
+@mixin style($fontSize,$font,$color,$underscoresColor) {
+    font: $fontSize $font;
+    color: $color;
+
+    &::before{
+        background: $underscoresColor;
+    }
+    
+}
+
+    .header_heading{
+        @include style(90px,$heading,$color,$underscoresColor);
+        width:625px;
+        line-height: 1;
+        display:block;
+        margin-top:90px;
+        font-weight: bold;
+        
+
+    &::before {
+    display: block;
+    content: '';
+    width: 380px;
+    height: 30px;
+    position: absolute;
+    margin-top: 150px;
+    z-index: -1;
+    }
+    
+}
+    .header_text{
+        white-space: pre-line;
+  font-size: 1.3em;
+  line-height: 1.4;
+  color: $headerTextColor;
+  font: $body;
+        margin-top:48px;
+    }
+    
+    .header_button{background-color: $buttonColor;
+        border:none;
+        border-radius: 5%;
+        width:180px;
+        height: 60px;
+        color:#fff;
+        font-size: 1.3em;
+        margin-top:80px;
+    }
+     
+    .section_text{
+        text-align: center;
+        margin:40px;
+        margin-bottom:50px;
+        font:55px $heading;
+        color:$color;
+        font-weight: 550;
+    
+        &::before{
+            content: '';
+            width: 245px;
+            height: 17px;
+             position: absolute;
+            margin-top: 40px;
+            margin-left:285px;
+             z-index: -1;
+            background:$underscoresColor;
+
+        }
+    }
+    
+    .section_card_wrap{
+        display: flex;
+        flex-direction: row;
+        margin-left:190px;
+        margin-top:0px;
+
+    }
+
+    .section_card{
+        background: $sectionCard-FooterColor;
+        border-radius: 2%;
+        height: 525px;
+        width:450px;
+        margin-right:25px;
+        padding: 25px;
+    }
+
+    .section_card_img{
+        min-width: 400px;
+        min-height: 300px;
+        border-radius: 2%;
+    }
+
+    .section_card_heading{
+        color: #fff;
+        font:1.9em $heading;
+        font-weight: 900;
+        display: inline-block;
+        position: relative;
+        margin: 10px;
+        left:25%;
+        z-index: 1;
+
+        &::before{
+           display: block;
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 100%;
+    background: $underscoresColor;
+    bottom: 0;
+    z-index: -1;
+        }   
+}
+
+    .section_card_text {
+        font-family:  $body;
+        margin: 0px;
+        color: map-get($colors, "grey1");
+        padding-top:30px;
+        font-size: 20px;
+        text-align: center;
+        line-height: 1.5;
+        height: 105px;
+        display: flex;
+        align-items: center;
+}
+
+.section_banner_text_wrap{
+    position: relative;
+    margin-top:20px;
+    margin-left:350px;
+    top:150px;
+    background: linear-gradient(to right, $gradientColor1, $gradientColor2);
+    border-radius: 10px;
+    width:1060px;
+    height: 180px;
+    z-index:2;
+    padding-left: 140px;
+}
+
+.footer{
+    position: absolute;
+    width:100%;
+    height:300px;
+    background: $sectionCard-FooterColor;
+}
+
+.section_banner_heading{
+        font:2.3em $body;
+        color:$headerTextColor;
+        font-weight: bolder;
+        padding-top:25px;
+
+        &::before{
+            content: '';
+            width: 85px;
+            height: 15px;
+             position: absolute;
+            margin-top: 30px;
+            margin-left:$start;
+            z-index: -1;
+            background:$underscoresColor;
+        }
+}
+
+.section_banner_text{
+    font:1.3em $body;
+    color: map-get($colors, "grey2");
+    padding-top:10px;
+}
+
+.section_banner_button{
+    @extend .header_button;
+    position:relative;
+    left:1250px;
+    top:20px;
+    margin-top: 0;
+    z-index: 3;
+}
+
+.footer-wrap{
+    display: flex;
+    margin-top:170px;
+    justify-content: space-around;
+    font: 1.2em $body;
+    color: map-get($colors, "grey2");
+
+}
+
+.footer_text{
+    max-width: 350px;
+    font-size: 0.9em;
+}
+
+.footer_logo{
+    img{
+        max-height: 55px;
+        max-width: 55px;
+    }
+}
