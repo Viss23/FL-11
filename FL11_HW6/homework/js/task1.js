@@ -1,7 +1,7 @@
-let input=prompt('Введіть координати 3 точок через кому (a1,a2,b1,b2,c1,c2)','2,2,8,8,5,5');
+let input=prompt('Enter coordinates of 3 points(a1,a2,b1,b2,c1,c2)','2,2,8,8,5,5');
 const amountOfComas=5;
 while( input.split(',').length -1 !==amountOfComas){
-     input=prompt('Ви ввели невірні данні,попробуйте ще раз.Введіть координати 3 точок через кому (a1,a2,b1,b2,c1,c2)');
+     input=prompt('You entered incorrect data, please try again. Enter coordinates of 3 points(a1,a2,b1,b2,c1,c2)');
  }
 let coordinates=input.split(',');
 const a1ArrayIndex=0;
