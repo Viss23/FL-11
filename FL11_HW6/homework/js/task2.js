@@ -1,6 +1,6 @@
-let a=parseFloat(prompt('Введіть довжину сторони а','5'));
-let b=parseFloat(prompt('Введіть довжину сторони b','5'));
-let c=parseFloat(prompt('Введіть довжину сторони c','5'));
+let a=parseFloat(prompt('Enter length of a side','5'));
+let b=parseFloat(prompt('Enter length of b side','5'));
+let c=parseFloat(prompt('Enter length of c side','5'));
 
 if (a+b<=c || b+c<=a ||a+c<=b){
     console.log('Triangle doesn’t exist');
