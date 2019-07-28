@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework 12 - Simple TODO List</title>
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+  <div id="root">
+    <div id="main_page">
+      <p><b>Simple TODO applicatioon</b></p>
+      <button  class="btn" id="newTask-btn"  >Add new task</button>
+      <div id="task-list"></div>
+    </div>
+    <div id="add-task_page">
+      <p>Add task</p>
+      <input type="text" id="taskName-input" onchange="isEmptyInput(this,'confirmName-btn')">
+      <button  class="btn" id="confirmName-btn" >Save Changes</button>
+      <button  class="btn" id="cancelTaskName-btn" >Cancel</button>
+    </div>
+    <div id="modify-item">
+        <p>Modify item</p>
+      <input type="text" id="modify-input">
+      <button  class="btn" id="modify-btn" >Save Changes</button>
+      <button  class="btn" id="cancelModify-btn" >Cancel</button>
+    </div>
+    <div id="message">
+      <h1>Error</h1>
+      <p id='messageError'>abdsadb</p>
+    </div>
+
+
+
+  </div>
+
+  <script src="./src/app.js"></script>
+</body>
+</html>

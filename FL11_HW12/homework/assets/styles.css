@@ -1,0 +1,63 @@
+#main_page{
+  display: block;
+}
+
+#add-task_page{
+  display: none;
+}
+
+#modify-item{
+  display: none;
+}
+
+#message{
+  display: none;
+  background-color: orangered;
+  width: 300px;
+  height:200px;
+  position: absolute;
+  top:10px;
+}
+
+#message{
+  color:white;
+  font-size: 24px;
+}
+
+
+#root{
+margin:  30px auto;
+width: 900px;
+text-align: center;
+}
+
+.isdone-true{
+  src: ('\assets\img\done-s.png');
+  
+}
+
+.isdone-false{
+  src: ('/assets/img/todo-s.png');
+  width: 50px;
+  height: 40px;
+}
+
+
+div{
+  height: 40px;
+  width: 500px;
+}
+
+.toDoItems > *{
+  display: inline-block;
+  margin: auto;
+  vertical-align: top;
+}
+
+.toDoItems > p{
+  display: inline-block;
+  width: 400px;
+  font-size: 24px;
+  height: 35px;
+}
+
